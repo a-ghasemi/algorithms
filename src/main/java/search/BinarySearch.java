@@ -1,22 +1,22 @@
 package search;
 
-import static java.util.Arrays.sort;
+import java.util.List;
 
 public class BinarySearch<T extends Comparable<T>> implements Search<T> {
-    T[] collection;
+    List<T> collection;
 
-    public BinarySearch(T[] collection) {
+    public BinarySearch(List<T> collection) {
         this.collection = collection;
     }
 
     @Override
     public Integer indexOf(T element) {
         int low = 0;
-        int high = collection.length - 1;
+        int high = collection.size() - 1;
 
         while (low <= high) {
             int mid = (high + low) / 2;
-            int comparison = collection[mid].compareTo(element);
+            int comparison = collection.get(mid).compareTo(element);
 
             if (comparison > 0) {
                 high = mid - 1;

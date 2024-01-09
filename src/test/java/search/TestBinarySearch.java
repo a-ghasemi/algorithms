@@ -3,11 +3,13 @@ package search;
 import org.junit.Test;
 import org.junit.Assert;
 
+import java.util.List;
+
 public class TestBinarySearch {
 
     @Test
     public void testFindElementIndex() {
-        Integer[] initialCollection = new Integer[]{1, 2, 3, 4, 5};
+        List<Integer> initialCollection = List.of(new Integer[]{1, 2, 3, 4, 5});
         int searchFor = 3;
         int expectedResult = 2;
 
@@ -19,7 +21,7 @@ public class TestBinarySearch {
 
     @Test
     public void testElementNotFound() {
-        Integer[] initialCollection = new Integer[]{1, 2, 3, 4, 5};
+        List<Integer> initialCollection = List.of(new Integer[]{1, 2, 3, 4, 5});
         int searchFor = 6;
 
         Search<Integer> binarySearchEngine = new BinarySearch<>(initialCollection);
