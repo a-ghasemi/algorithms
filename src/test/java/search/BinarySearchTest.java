@@ -5,10 +5,10 @@ import org.junit.Assert;
 
 import java.util.List;
 
-public class TestBinarySearch {
+public class BinarySearchTest {
 
     @Test
-    public void testFindElementIndex() {
+    public void shouldReturnIndexIfFindElement() {
         List<Integer> initialCollection = List.of(new Integer[]{1, 2, 3, 4, 5});
         int searchFor = 3;
         int expectedResult = 2;
@@ -20,7 +20,7 @@ public class TestBinarySearch {
     }
 
     @Test
-    public void testElementNotFound() {
+    public void shouldReturnNullIfElementIsNotFound() {
         List<Integer> initialCollection = List.of(new Integer[]{1, 2, 3, 4, 5});
         int searchFor = 6;
 
