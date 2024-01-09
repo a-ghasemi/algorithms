@@ -7,7 +7,7 @@ public class TestBinarySearch {
 
     @Test
     public void testFindElementIndex() {
-        int[] initialCollection = new int[]{1, 2, 3, 4, 5};
+        Integer[] initialCollection = new Integer[]{1, 2, 3, 4, 5};
         int searchFor = 3;
         int expectedResult = 2;
 
@@ -19,7 +19,7 @@ public class TestBinarySearch {
 
     @Test
     public void testElementNotFound() {
-        int[] initialCollection = new int[]{1, 2, 3, 4, 5};
+        Integer[] initialCollection = new Integer[]{1, 2, 3, 4, 5};
         int searchFor = 6;
 
         Search<Integer> binarySearchEngine = new BinarySearch<>(initialCollection);
